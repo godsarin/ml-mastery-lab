@@ -1,0 +1,18 @@
+﻿# Environment
+.venv/
+.env
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# Generated data and models (re-create by running notebooks)
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+!models/best_model.joblib
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
