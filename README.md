@@ -53,6 +53,29 @@ reports/figures/ plots
 unsupervised/    Module 2 (coming later)
 ```
 
+## Progress
+
+| # | Topic | Note | Notebook | Status |
+|---|---|---|---|---|
+| 01 | Data understanding | [note](notes/01_data_understanding.md) | [notebook](notebooks/01_supervised_churn/01_data_understanding.ipynb) | Done |
+| 02 | Data cleaning | [note](notes/02_data_cleaning.md) | [notebook](notebooks/01_supervised_churn/02_data_cleaning.ipynb) | Done |
+| 03 | Exploratory data analysis | [note](notes/03_eda.md) | [notebook](notebooks/01_supervised_churn/03_eda.ipynb) | Done |
+| 04 | Outlier detection and handling | [note](notes/04_outliers.md) | [notebook](notebooks/01_supervised_churn/04_outliers.ipynb) | Done |
+| 05-18 | Split, encoding, scaling, pipelines, 6 classifiers, tuning, comparison, saving | | | Planned |
+| R1-R2 | Regression exercises | | | Planned |
+
+## Key findings so far
+- 7,043 customers, about 26.5% churned (class imbalance, so accuracy alone is misleading).
+- `TotalCharges` had 11 hidden blanks (new customers, `tenure = 0`), fixed with a rule-based fill of 0.
+- Churn is strongly linked to short tenure, month-to-month contracts (43% churn vs 3% on two-year), fiber optic internet and electronic-check payment.
+- `gender` has almost no effect. `tenure` and `TotalCharges` overlap strongly (correlation 0.83).
+- No outliers were found in the numeric features.
+
+## Visualizations
+![Churn rate by category](reports/figures/03_churn_rate_by_category.png)
+![Numeric features vs churn](reports/figures/03_numeric_vs_churn.png)
+![Correlation heatmap](reports/figures/03_correlation_heatmap.png)
+
 ## Results and model comparison
 _To be added after the models are trained._
 
